@@ -1,0 +1,35 @@
+{
+    "name": "php-solution/app-cache-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony bundle for using Redis as main cache on app.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oleksandr Savchenko",
+            "email": "dev.olsav@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "ext-redis": ">=3.0",
+        "symfony/dependency-injection": "^3.0",
+        "symfony/http-kernel": "^3.0",
+        "symfony/config": "^3.0",
+        "symfony/framework-bundle": "^3.0",
+        "doctrine/cache": "~1.0"
+    },
+    "autoload":     {
+        "psr-4": { "PhpSolution\\AppCacheBundle\\": "src/" }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.x-dev"
+        }
+    },
+    "suggest": {
+        "ext-igbinary": "for better performance",
+        "symfony/swiftmailer-bundle": ">=2.0"
+    }
+}
