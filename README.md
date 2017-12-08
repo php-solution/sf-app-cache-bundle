@@ -309,3 +309,61 @@ app_cache:
                 entity_managers: ['default']
                 document_managers: ['default']
 ````
+
+## Working with not prod environments
+
+### Test environment
+
+The test environment must be the same as production environment. Therefore, for test environment, it is recommended to clean the cache before starting the test cases. 
+
+Cleaning cache with listeners. **phpunit.xml** example:
+
+````
+<phpunit>
+
+    ...
+    
+    <listeners>
+    
+        ...
+        
+        <listener class="PhpSolution\FunctionalTest\PHPUnit\Listener\CommandLauncher">
+            <arguments>
+                <string>doctrine:cache:clear-metadata</string>
+                <array>
+                    <element key="--flush">
+                        <null/>
+                    </element>
+                </array>
+            </arguments>
+        </listener>
+        <listener class="PhpSolution\FunctionalTest\PHPUnit\Listener\CommandLauncher">
+            <arguments>
+                <string>doctrine:cache:clear-query</string>
+                <array>
+                    <element key="--flush">
+                        <null/>
+                    </element>
+                </array>
+            </arguments>
+        </listener>
+        <listener class="PhpSolution\FunctionalTest\PHPUnit\Listener\CommandLauncher">
+            <arguments>
+                <string>doctrine:cache:clear-result</string>
+                <array>
+                    <element key="--flush">
+                        <null/>
+                    </element>
+                </array>
+            </arguments>
+        </listener>
+        
+        ...
+        
+    </listeners>
+</phpunit>
+````
+
+### Dev environment
+
+For dev environment, it is not recommended to use caching
