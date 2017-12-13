@@ -13,9 +13,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\Validator\Mapping\Cache\DoctrineCache;
 
 /**
- * Class AppCacheExtension
- *
- * @package PhpSolution\AppCacheBundle\DependencyInjection
+ * AppCacheExtension
  */
 class AppCacheExtension extends Extension
 {

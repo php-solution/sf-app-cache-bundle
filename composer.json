@@ -11,12 +11,16 @@
     ],
     "require": {
         "php": ">=7.1",
+        "doctrine/cache": ">=1.0",
         "ext-redis": ">=3.0",
-        "symfony/dependency-injection": "~3.0||~4.0",
-        "symfony/http-kernel": "~3.0||~4.0",
-        "symfony/config": "~3.0||~4.0",
-        "symfony/framework-bundle": "~3.0||~4.0",
-        "doctrine/cache": "~1.0"
+        "symfony/config": ">=4.0",
+        "symfony/dependency-injection": ">=4.0",
+        "symfony/framework-bundle": ">=4.0",
+        "symfony/http-kernel": ">=4.0"
+    },
+    "require-dev": {
+        "symfony/swiftmailer-bundle": ">=3.1",
+        "symfony/validator": ">=4.0"
     },
     "autoload":     {
         "psr-4": { "PhpSolution\\AppCacheBundle\\": "src/" }

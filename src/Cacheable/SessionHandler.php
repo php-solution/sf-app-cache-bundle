@@ -1,10 +1,9 @@
 <?php
+
 namespace PhpSolution\AppCacheBundle\Cacheable;
 
 /**
- * Class SessionHandler
- *
- * @package PhpSolution\AppCacheBundle\Cacheable
+ * SessionHandler
  */
 class SessionHandler implements \SessionHandlerInterface
 {
@@ -22,8 +21,6 @@ class SessionHandler implements \SessionHandlerInterface
     private $prefix;
 
     /**
-     * SessionHandler constructor.
-     *
      * @param \Redis      $redisClient
      * @param int         $ttl
      * @param null|string $prefix

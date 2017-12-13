@@ -1,4 +1,5 @@
 <?php
+
 namespace PhpSolution\AppCacheBundle\DependencyInjection;
 
 use Doctrine\Common\Cache\RedisCache;
@@ -7,9 +8,7 @@ use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 /**
- * Class Configuration
- *
- * @package PhpSolution\AppCacheBundle\DependencyInjection
+ * Configuration
  */
 class Configuration implements ConfigurationInterface
 {

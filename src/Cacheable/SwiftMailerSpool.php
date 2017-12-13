@@ -1,13 +1,9 @@
 <?php
+
 namespace PhpSolution\AppCacheBundle\Cacheable;
 
-use Psr\Cache\CacheItemPoolInterface;
-use Symfony\Component\Cache\Adapter\RedisAdapter;
-
 /**
- * Class SwiftMailerSpool
- *
- * @package PhpSolution\AppCacheBundle\Cacheable
+ * SwiftMailerSpool
  */
 class SwiftMailerSpool extends \Swift_ConfigurableSpool
 {
@@ -61,11 +57,11 @@ class SwiftMailerSpool extends \Swift_ConfigurableSpool
     }
 
     /**
-     * @param \Swift_Mime_Message $message
+     * @param \Swift_Mime_SimpleMessage $message
      *
      * @return bool
      */
-    public function queueMessage(\Swift_Mime_Message $message): bool
+    public function queueMessage(\Swift_Mime_SimpleMessage $message): bool
     {
         $this->redisClient->rPush($this->cacheKey, serialize($message));
 

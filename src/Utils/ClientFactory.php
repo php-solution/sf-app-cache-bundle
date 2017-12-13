@@ -1,12 +1,11 @@
 <?php
+
 namespace PhpSolution\AppCacheBundle\Utils;
 
 use Symfony\Component\Cache\Adapter\RedisAdapter;
 
 /**
- * Class ClientFactory
- *
- * @package PhpSolution\AppCacheBundle\Utils
+ * ClientFactory
  */
 class ClientFactory
 {
