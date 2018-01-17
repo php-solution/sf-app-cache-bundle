@@ -13,10 +13,10 @@
         "php": ">=7.1",
         "doctrine/cache": ">=1.0",
         "ext-redis": ">=3.0",
-        "symfony/config": ">=4.0",
-        "symfony/dependency-injection": ">=4.0",
-        "symfony/framework-bundle": ">=4.0",
-        "symfony/http-kernel": ">=4.0"
+        "symfony/config": ">=3.3",
+        "symfony/dependency-injection": ">=3.3",
+        "symfony/framework-bundle": ">=3.3",
+        "symfony/http-kernel": ">=3.3"
     },
     "require-dev": {
         "symfony/swiftmailer-bundle": ">=3.1",
